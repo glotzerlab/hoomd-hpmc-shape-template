@@ -48,7 +48,6 @@ PYBIND11_MODULE(_template, m)
         .def(pybind11::init<pybind11::dict>())
         .def("asDict", &MySphereParams::asDict);
 
-    detail::export_PotentialPair<EvaluatorPairExample>(m, "PotentialPairExample");
 #ifdef ENABLE_HIP
     // TODO: Call export_ClassGPU(m) for each GPU enabled C++ class to be exported
     // to Python.
