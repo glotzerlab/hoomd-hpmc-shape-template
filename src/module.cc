@@ -2,7 +2,6 @@
 // Part of HOOMD-blue, released under the BSD 3-Clause License.
 
 // TODO: Include the header files of classes that will be exported to Python.
-
 #include "hoomd/hpmc/ComputeFreeVolume.h"
 #include "hoomd/hpmc/IntegratorHPMC.h"
 #include "hoomd/hpmc/IntegratorHPMCMono.h"
@@ -49,6 +48,7 @@ PYBIND11_MODULE(_template, m)
         .def(pybind11::init<pybind11::dict>())
         .def("asDict", &MySphereParams::asDict);
 
+    detail::export_PotentialPair<EvaluatorPairExample>(m, "PotentialPairExample");
 #ifdef ENABLE_HIP
     // TODO: Call export_ClassGPU(m) for each GPU enabled C++ class to be exported
     // to Python.

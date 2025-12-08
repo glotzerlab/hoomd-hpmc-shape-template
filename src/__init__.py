@@ -4,6 +4,5 @@
 """Template HOOMD-blue component."""
 # TODO: Document your component.
 
-# TODO: Import all Python modules in your component.
 from . import version
 from .integrate import MySphere
